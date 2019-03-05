@@ -1,0 +1,11 @@
+Img1 = imread('Image A.jpg'); 
+Img2= imread('Image B.jpg'); 
+figure; 
+subplot(1,2,1),imshow(Img1); 
+subplot(1,2,2),imshow(Img2); 
+标注点后命令行输入
+H=cp2tform(movingPoints,fixedPoints,'linear conformal'); 
+out=imtransform(Img1,H); 
+figure 
+subplot(1,2,1),imshow(out); 
+subplot(1,2,2),imshow(Img2); 
